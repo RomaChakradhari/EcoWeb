@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import { isAdmin, requireSignIn } from "../middleware/registerMiddleware.js";
 import ExpressFormidable from "express-formidable";
@@ -7,8 +9,6 @@ import slugify from "slugify";
 import Category from "../models/category.js"
 import braintree from "braintree";
 import Order from "../models/order.js";
-import dotenv from "dotenv";
-dotenv.config();
 
 const router = express.Router();
 
